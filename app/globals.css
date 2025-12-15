@@ -15,6 +15,10 @@
 html{
     color: #1e3b2b;
 }
+
+body{
+  overflow-x: hidden;
+}
 /* Service Card */
 .service-card {
   display: block;

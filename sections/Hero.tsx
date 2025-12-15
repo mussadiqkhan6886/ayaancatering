@@ -37,7 +37,7 @@ const Hero = () => {
         Create a memory that lasts a <strong><i className='scale-105'>lifetime</i></strong> 
       </h1>
 
-      <div className='absolute left-1/2  text-white bottom-60 sm:bottom-25 -translate-x-1/2 flex items-center justify-center flex-col'>
+      <div className='absolute left-1/2  text-white bottom-50 sm:bottom-25 -translate-x-1/2 flex items-center justify-center flex-col'>
           <p className='text-xl mb-5'>See Our Work</p>
           <FiArrowDown className='text-[35px] md:text-[40px] animate-ping' />
       </div>
