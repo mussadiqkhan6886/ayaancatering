@@ -47,7 +47,7 @@ const slideIn = (direction = "left") => ({
 const Services = () => {
   
   return (
-    <section className="relative py-20 bg-white max-w-7xl mx-auto px-4">
+    <section className="relative overflow-x-hidden py-20 bg-white max-w-7xl mx-auto px-4">
       
       <h3 className={`${prata.className} text-center text-3xl md:text-4xl font-bold mb-12`}>
         Our Core Services
