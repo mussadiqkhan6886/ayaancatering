@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { FiMenu, FiX } from "react-icons/fi"
 import { prata } from '@/lib/fonts/font'
 
-const italianno = Italianno({
+export const italianno = Italianno({
   weight: "400",
   subsets: ["latin"]
 })

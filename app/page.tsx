@@ -1,6 +1,8 @@
 import Velocity from '@/components/Velocity'
 import AboutUs from '@/sections/AboutUs'
 import Hero from '@/sections/Hero'
+import Services from '@/sections/Services'
+import WhatYouGet from '@/sections/WhatYouGet'
 import React from 'react'
 
 const Home = () => {
@@ -9,6 +11,8 @@ const Home = () => {
       <Hero />
       <Velocity />
       <AboutUs />
+      <WhatYouGet />
+      <Services />
     </main>
   )
 }

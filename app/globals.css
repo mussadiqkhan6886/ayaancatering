@@ -3,3 +3,83 @@
 @theme {
     --color-main: #5b7567;
 }
+
+html{
+    color: #1e3b2b;
+}
+/* Service Card */
+.service-card {
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Image Wrapper */
+.service-image-wrapper {
+  position: relative;
+  height: 410px;
+  overflow: hidden;
+}
+
+/* Image */
+.service-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease !important;
+}
+
+/* Hover Zoom */
+.service-card:hover img {
+  transform: scale(1.12) !important;
+}
+
+/* Overlay */
+.service-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.65),
+    rgba(0, 0, 0, 0.15)
+  );
+  display: flex;
+  align-items: flex-end;
+  padding: 24px;
+}
+
+/* Title */
+.service-overlay h4 {
+  color: white;
+  font-size: 33px;
+}
+
+/* ============================= */
+/* Custom Swiper Navigation */
+/* ============================= */
+
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: white;
+  color: black;
+  border-radius: 9999px; /* full round */
+  width: 45px;
+  height: 45px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  top: 45%; /* vertically centered */
+}
+
+/* Move arrows slightly farther from edges */
+.swiper-button-next {
+  padding: 1rem !important;
+  font-size: 10rem !important;
+  color: rgb(0 0 0) !important;
+}
+
+.swiper-button-prev {
+ padding: 1rem !important;
+  font-size: 10rem !important;
+  color: rgb(0 0 0) !important;
+}
