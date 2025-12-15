@@ -5,6 +5,7 @@ import Gallery from '@/sections/Gallery'
 import Hero from '@/sections/Hero'
 import Menu from '@/sections/Menu'
 import Quote from '@/sections/Quote'
+import Reviews from '@/sections/Reviews'
 import SayEnd from '@/sections/SayEnd'
 import Services from '@/sections/Services'
 import WhatYouGet from '@/sections/WhatYouGet'
@@ -23,6 +24,7 @@ const Home = () => {
       <Gallery />
       <ContactUs />
       <SayEnd />
+      <Reviews />
     </main>
   )
 }
