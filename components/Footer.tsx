@@ -20,6 +20,9 @@ const Footer = () => {
           </p>
           </div>
         </Link>
+        <div className='border-t border-main py-2 w-full text-center text-sm'>
+          <p>Copyright Reserved &copy; 2025 <span className='font-[500] inline-block ml-2'>Design & Developed By <Link href={"/scrupulous.vercel.app"} className='hover:text-pink-800'>Scrupulous</Link></span></p>
+        </div>
     </footer>
   )
 }
