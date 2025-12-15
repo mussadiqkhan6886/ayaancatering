@@ -1,8 +1,16 @@
 @import "tailwindcss";
 
-@theme {
-    --color-main: #5b7567;
+@theme inline {
+  --color-main: #5b7567;
+  --animate-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
 }
+
 
 html{
     color: #1e3b2b;

@@ -1,5 +1,6 @@
 import Velocity from '@/components/Velocity'
 import AboutUs from '@/sections/AboutUs'
+import Gallery from '@/sections/Gallery'
 import Hero from '@/sections/Hero'
 import Menu from '@/sections/Menu'
 import Quote from '@/sections/Quote'
@@ -17,6 +18,7 @@ const Home = () => {
       <Services />
       <Menu />
       <Quote />
+      <Gallery />
     </main>
   )
 }
