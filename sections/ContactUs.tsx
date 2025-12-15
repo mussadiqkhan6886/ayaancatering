@@ -50,8 +50,20 @@ const ContactUs = () => {
           <h4 className="text-xl font-semibold mb-4">Get in Touch</h4>
           <form className="space-y-4">
             <input type="text" placeholder="Your Name" className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-main" />
-            <input type="email" placeholder="Email Address" className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-main" />
             <input type="text" placeholder="Phone" className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-main" />
+            <input type="text" placeholder="Guest Count" className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-main" />
+            <div>
+              <label className='inline-block mr-4'>Event Type: </label>
+            <select className='border rounded-lg p-2'>
+              <option className='text-gray-600' value="">Choose Event</option>
+              <option value="">Wedding Event</option>
+              <option value="">Birthday Party</option>
+              <option value="">Business Event</option>
+              <option value="">Family Gathering</option>
+            </select>
+            <label className='inline-block mx-4' >Event Date: </label>
+            <input type="date" className='border border-black rounded-lg p-2' />
+            </div>
             <textarea placeholder="Message" rows={5} className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-main"></textarea>
             <button type="submit" className="bg-main text-white px-6 py-3 rounded-full font-semibold hover:bg-main/90 transition">
               Send Message
