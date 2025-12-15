@@ -1,6 +1,10 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import { prata } from '@/lib/fonts/font'
 import React from 'react'
 import { FiPhone, FiMail, FiMapPin } from 'react-icons/fi'
+import { fadeUp } from './WhatYouGet';
 
 const achievements = [
   { value: '7+', label: 'Years of Experience' },
@@ -27,11 +31,14 @@ const ContactUs = () => {
       {/* Achievements Grid */}
       <div className="grid grid-cols-2 md:grid-cols-3 gap-8 text-center">
         {achievements.map((item, index) => (
-          <div key={index} className="flex flex-col items-center p-6 border rounded-lg shadow-lg hover:shadow-xl transition">
+          <motion.div initial="hidden"
+                              whileInView="visible"
+                              viewport={{ once: true }}
+                              variants={fadeUp} key={index} className="flex flex-col items-center p-6 border rounded-lg shadow-lg hover:shadow-xl transition">
             {/* Placeholder for icon/image */}
             <div className="text-4xl mb-2 text-main font-bold">{item.value}</div>
             <p className="text-gray-700 font-medium">{item.label}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
 

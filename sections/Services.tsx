@@ -4,7 +4,7 @@ import React from "react"
 import Link from "next/link"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation } from "swiper/modules"
-
+import {motion} from "framer-motion"
 import "swiper/css"
 import "swiper/css/navigation"
 import { prata } from "@/lib/fonts/font"
@@ -39,7 +39,13 @@ const services = [
   },
 ]
 
+const slideIn = (direction = "left") => ({
+  hidden: { opacity: 0, x: direction === "left" ? -100 : 100 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
+})
+
 const Services = () => {
+  
   return (
     <section className="relative py-20 bg-white max-w-7xl mx-auto px-4">
       
@@ -85,70 +91,95 @@ const Services = () => {
           </Link>
         </div>
 
-      <div className="my-20 lg:px-20">
-        {/* Indoor Service */}
-      <div className="flex flex-col md:flex-row items-center gap-10">
+     <div className="my-20 lg:px-20 space-y-20">
+      {/* Indoor Service */}
+      <motion.div
+        className="flex flex-col md:flex-row items-center gap-10"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={slideIn("left")}
+      >
         {/* Image */}
-        <div className="w-full md:w-1/2 relative overflow-hidden ">
+        <div className="w-full md:w-1/2 relative overflow-hidden">
           <Image
             src="/catering.jpg"
             alt="Indoor Event"
             width={600}
             height={400}
-            className="w-full h-[500px] object-cover"
+            className="w-full h-[500px] object-cover rounded-xl"
           />
         </div>
 
         {/* Text */}
         <div className="w-full md:w-1/2 text-gray-700 text-lg leading-relaxed">
-        <h4 className={`${prata.className} text-3xl mb-7`}>OutDoor Events</h4>
+          <h4 className={`${prata.className} text-3xl mb-7`}>Indoor Events</h4>
           <p>
-            Our indoor events are crafted for comfort and elegance. From intimate gatherings to large-scale celebrations, we ensure a perfect ambiance with sophisticated décor, seamless catering, and attention to every detail.
-            Our indoor events are crafted for comfort and elegance. From intimate gatherings to large-scale celebrations, we ensure a perfect ambiance with sophisticated décor, seamless catering, and attention to every detail.
-            Our indoor events are crafted for comfort and elegance. From intimate gatherings to large-scale celebrations, we ensure a perfect ambiance with sophisticated décor, seamless catering, and attention to every detail.
+            Our indoor events are crafted for comfort and elegance. From intimate
+            gatherings to large-scale celebrations, we ensure a perfect ambiance
+            with sophisticated décor, seamless catering, and attention to every detail.
           </p>
         </div>
-      </div>
+      </motion.div>
 
       {/* Outdoor Service */}
-      <div className="flex flex-col md:flex-row-reverse items-center gap-10">
+      <motion.div
+        className="flex flex-col md:flex-row-reverse items-center gap-10"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={slideIn("right")}
+      >
         {/* Image */}
-        <div className="w-full md:w-1/2 relative overflow-hidden ">
+        <div className="w-full md:w-1/2 relative overflow-hidden">
           <Image
             src="/family.jpg"
             alt="Outdoor Event"
             width={600}
             height={400}
-            className="w-full h-[500px]  object-cover"
+            className="w-full h-[500px] object-cover rounded-xl"
           />
         </div>
 
         {/* Text */}
         <div className="w-full md:w-1/2 text-gray-700 text-lg leading-relaxed">
-        <h4  className={`${prata.className} text-3xl mb-7`}>InDoor Events</h4>
+          <h4 className={`${prata.className} text-3xl mb-7`}>Outdoor Events</h4>
           <p>
-            Celebrate under the open sky with our outdoor events. Whether it's a garden party, wedding, or corporate event, we create a magical atmosphere combining natural beauty, premium catering, and professional planning.
-            Celebrate under the open sky with our outdoor events. Whether it's a garden party, wedding, or corporate event, we create a magical atmosphere combining natural beauty, premium catering, and professional planning.
-            Celebrate under the open sky with our outdoor events. Whether it's a garden party, wedding, or corporate event, we create a magical atmosphere combining natural beauty, premium catering, and professional planning.
+            Celebrate under the open sky with our outdoor events. Whether it's a garden
+            party, wedding, or corporate event, we create a magical atmosphere combining
+            natural beauty, premium catering, and professional planning.
           </p>
         </div>
-      </div>
-      </div>
-      <div className="flex items-center justify-center flex-col gap-5">
-        <Image src={"/icon.svg"} alt="icon" width={50} height={50} className="spin-slow" />
-        <div>
-          <p className="text-2xl text-center font-[200] italic">You put a lot of effort into your event.
-            <br />
-            Why not make our service a <span className={`${prata.className}`}>memorable part of it?</span></p>
-        </div>
-            <Link
-            href="/"
-            className={`${prata.className} rounded-full px-6 py-2.5 border border-transparent bg-[#d497a1] text-white hover:bg-white hover:border hover:border-main hover:text-main duration-300`}
-          >
-            Make it Memorable
-          </Link>
-      </div>
+      </motion.div>
 
+      {/* CTA Section */}
+      <motion.div
+        className="flex items-center justify-center flex-col gap-5 text-center"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0, transition: { duration: 0.8 } }}
+        viewport={{ once: true }}
+      >
+        <Image
+          src="/icon.svg"
+          alt="icon"
+          width={50}
+          height={50}
+          className="spin-slow"
+        />
+        <p className="text-2xl font-[200] italic">
+          You put a lot of effort into your event.
+          <br />
+          Why not make our service a{" "}
+          <span className={`${prata.className}`}>memorable part of it?</span>
+        </p>
+        <Link
+          href="/"
+          className={`${prata.className} rounded-full px-6 py-2.5 border border-transparent bg-[#d497a1] text-white hover:bg-white hover:border hover:border-main hover:text-main duration-300`}
+        >
+          Make it Memorable
+        </Link>
+      </motion.div>
+    </div>
     </section>
   )
 }

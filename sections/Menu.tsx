@@ -1,5 +1,9 @@
+'use client';
+
 import { prata } from '@/lib/fonts/font'
 import React from 'react'
+import { fadeUp } from './WhatYouGet'
+import { motion } from 'framer-motion'
 
 const Menu = () => {
 
@@ -24,9 +28,14 @@ const Menu = () => {
         </div>
         <div className='grid lg:grid-cols-2 gap-10 place-items-center mt-9'>
             {menus.map(item => (
-                <div className='bg-main h-[500px] rounded-lg border-black border w-[290px] md:w-[450px] text-white' key={item}>
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={fadeUp}
+                    className='bg-main h-[500px] rounded-lg border-black border w-[290px] md:w-[450px] text-white' key={item}>
                     <p>{item}</p> 
-                </div>
+                </motion.div>
             ))}
         </div>
     </section>
