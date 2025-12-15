@@ -11,11 +11,11 @@ const italianno = Italianno({
 const Footer = () => {
   return (
     <footer className='max-w-7xl flex flex-col items-center justify-center relative mx-auto border-t border-main'>
-       <Image src={"/spin.svg"} alt='spinning image' width={150} height={150} className='spin-slow absolute left-45 top-5 z-10' />
+       <Image src={"/spin.svg"} alt='spinning image' width={150} height={150} className='spin-slow absolute left-10 scale-75 md:scale-100 md:left-45 top-5 z-10' />
       <Link href="/" className="flex flex-col items-center md:items-start">
         <div className='pt-20'>
-          <p className={`${prata.className} font-semibold text-xl md:text-[106px] leading-10 uppercase text-center`}>Ayyan</p>
-          <p className={`${italianno.className} text-[25px] md:text-[140px]`}>
+          <p className={`${prata.className} font-semibold text-6xl md:text-[106px] leading-10 uppercase text-center`}>Ayyan</p>
+          <p className={`${italianno.className} text-[70px] sm:text-[80px] md:text-[140px]`}>
             Event And Catering
           </p>
           </div>

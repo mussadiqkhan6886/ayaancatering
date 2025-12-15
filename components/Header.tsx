@@ -35,7 +35,7 @@ const Header = () => {
     <header className="flex flex-col">
 
       {/* Top Bar */}
-      <div className="text-center font-light py-2 text-base md:text-lg bg-main text-white">
+      <div className="text-center font-light py-2 text-sm sm:text-base md:text-lg bg-main text-white">
         <p>
           Your Guests Deserve more than just an event.
           <Link className="underline font-medium ml-2" href="/">

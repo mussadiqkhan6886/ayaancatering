@@ -85,7 +85,7 @@ const Services = () => {
           </Link>
         </div>
 
-      <div className="my-20 px-20">
+      <div className="my-20 lg:px-20">
         {/* Indoor Service */}
       <div className="flex flex-col md:flex-row items-center gap-10">
         {/* Image */}
