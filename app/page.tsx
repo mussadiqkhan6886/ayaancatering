@@ -1,4 +1,5 @@
 import Velocity from '@/components/Velocity'
+import AboutUs from '@/sections/AboutUs'
 import Hero from '@/sections/Hero'
 import React from 'react'
 
@@ -7,6 +8,7 @@ const Home = () => {
     <main >
       <Hero />
       <Velocity />
+      <AboutUs />
     </main>
   )
 }
