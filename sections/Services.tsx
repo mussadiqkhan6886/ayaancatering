@@ -10,6 +10,7 @@ import "swiper/css/navigation"
 import { prata } from "@/lib/fonts/font"
 import { italianno } from "@/components/Header"
 import Image from "next/image"
+import { Button } from "@/components/ui/MovingBorder"
 
 const services = [
   {
@@ -75,6 +76,15 @@ const Services = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+
+        <div className="flex items-center justify-center pt-8">
+            <Link
+            href="/"
+            className={`${prata.className} border border-main rounded-full px-6 py-2.5 hover:bg-main hover:text-white duration-300`}
+          >
+            Book Now
+          </Link>
+        </div>
 
       <div className="my-20 px-20">
         {/* Indoor Service */}
