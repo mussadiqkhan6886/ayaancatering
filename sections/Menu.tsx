@@ -24,8 +24,8 @@ const Menu = () => {
         </div>
         <div className='grid grid-cols-2 gap-10 place-items-center mt-9'>
             {menus.map(item => (
-                <div className='bg-main h-[500px] border-black border w-[450px] text-white' key={item}>
-                    <p>{item}</p>
+                <div className='bg-main h-[500px] rounded-lg border-black border w-[450px] text-white' key={item}>
+                    <p>{item}</p> 
                 </div>
             ))}
         </div>
