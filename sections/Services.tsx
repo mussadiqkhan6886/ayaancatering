@@ -10,7 +10,6 @@ import "swiper/css/navigation"
 import { prata } from "@/lib/fonts/font"
 import { italianno } from "@/components/Header"
 import Image from "next/image"
-import { Button } from "@/components/ui/MovingBorder"
 
 const services = [
   {
