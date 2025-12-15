@@ -45,8 +45,8 @@ const Header = () => {
       <nav
         className={`
           flex px-6 border-b border-main py-2 items-center justify-between 
-          
-          ${isFixed ? "fixed top-0 left-0 w-full z-50 bg-white" : "absolute top-10 text-white w-full"}
+          transition-colors duration-300
+          ${isFixed ? "fixed top-0 left-0 w-full z-50 bg-white" : "absolute top-10 text-white w-full z-50"}
         `}
       >
         <Link href="/" className="block">
@@ -60,7 +60,7 @@ const Header = () => {
           {menu.map(item => (
             <li key={item.item}>
               <Link
-                className={`text-lg font-medium ${isFixed ? "text-main" : "text-white"} hover:text-black`}
+                className={`text-lg font-medium ${isFixed ? "text-main  hover:text-black" : "text-white"}`}
                 href={item.link}
               >
                 {item.item}
