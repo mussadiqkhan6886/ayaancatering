@@ -31,7 +31,7 @@ const Hero = () => {
       <h1
         className={`absolute left-1/2 top-1/2 
         -translate-x-1/2 -translate-y-1/2
-        text-[50px] font-bold text-white uppercase text-center
+        text-[35px] md:text-[50px] font-bold w-full px-10 md:px-37.5 lg:px-62.5 xl:px-75 text-white uppercase text-center
         ${prata.className}`}
       >
         Create a memory that lasts a lifetime
@@ -39,7 +39,7 @@ const Hero = () => {
 
       <div className='absolute left-1/2  text-white bottom-25 -translate-x-1/2 flex items-center justify-center flex-col'>
           <p className='text-2xl mb-5'>See Our Work</p>
-          <FiArrowDown className='text-[40px] animate-ping' />
+          <FiArrowDown className='text-[35px] md:text-[40px] animate-ping' />
       </div>
 
       {/* Social Icons */}
