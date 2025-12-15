@@ -134,6 +134,20 @@ const Services = () => {
         </div>
       </div>
       </div>
+      <div className="flex items-center justify-center flex-col gap-5">
+        <Image src={"/icon.svg"} alt="icon" width={50} height={50} className="spin-slow" />
+        <div>
+          <p className="text-2xl text-center font-[200] italic">You put a lot of effort into your event.
+            <br />
+            Why not make our service a <span className={`${prata.className}`}>memorable part of it?</span></p>
+        </div>
+            <Link
+            href="/"
+            className={`${prata.className} rounded-full px-6 py-2.5 border border-transparent bg-[#d497a1] text-white hover:bg-white hover:border hover:border-main hover:text-main duration-300`}
+          >
+            Make it Memorable
+          </Link>
+      </div>
 
     </section>
   )
