@@ -47,7 +47,7 @@ const Reviews = () => {
       {/* Heading */}
       <div className="text-center mb-16">
         <h2 className={`${prata.className} text-3xl md:text-4xl font-bold mb-4`}>
-          What Our Clients Say
+          What Clients are <strong> <i>Saying </i></strong>
         </h2>
         <p className="text-gray-500 max-w-xl mx-auto">
           Elegant events, memorable experiences — trusted by our clients.
