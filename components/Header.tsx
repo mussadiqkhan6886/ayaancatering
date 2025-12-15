@@ -51,7 +51,7 @@ const Header = () => {
           transition-colors duration-300
           ${isFixed
             ? "fixed top-0 left-0 w-full z-50 bg-white"
-            : "absolute top-10 w-full z-50 text-white"}
+            : "absolute top-13 sm:top-10 w-full z-50 text-white"}
         `}
       >
 
@@ -102,9 +102,10 @@ const Header = () => {
       {/* Mobile Menu Dropdown */}
       <div
         className={`
-          md:hidden fixed top-[130px]  left-0 w-full bg-white z-40
+          md:hidden fixed  left-0 w-full bg-white z-40
           transition-all duration-300 overflow-hidden
           ${isOpen ? "max-h-[440px] opacity-100" : "max-h-0 opacity-0"}
+          ${isFixed ? "top-[90px]" : "top-[130px]"}
         `}
       >
         <ul className="flex flex-col items-center gap-6 py-6">

@@ -52,7 +52,7 @@ const ContactUs = () => {
             <input type="text" placeholder="Your Name" className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-main" />
             <input type="text" placeholder="Phone" className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-main" />
             <input type="text" placeholder="Guest Count" className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-main" />
-            <div className='flex'>
+            <div className='flex flex-col sm:flex-row gap-3'>
               <div>
                 <label className='inline-block mr-4'>Event Type: </label>
                 <select className='border rounded-lg p-2'>

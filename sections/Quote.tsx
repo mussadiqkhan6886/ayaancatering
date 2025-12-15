@@ -26,10 +26,10 @@ const Quote = () => {
             Your event is a work of art. Trust a master with your masterpiece
           </h2>
 
-          <div className='border border-amber-400 w-[460px] md:w-4xl h-[250px] md:h-[330px] bg-transparent absolute -top-7 -left-7'>
+          <div className='border border-amber-400 w-[100%] h-[250px] md:h-[330px] bg-transparent absolute -top-7 -left-7'>
 
           </div>
-          <div className='border border-amber-400 w-[460px] md:w-4xl h-[250px] md:h-[330px] bg-transparent absolute -bottom-7 -right-7'>
+          <div className='border border-amber-400 w-[100%] h-[250px] md:h-[330px] bg-transparent absolute -bottom-7 -right-7'>
 
           </div>
 

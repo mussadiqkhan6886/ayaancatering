@@ -11,7 +11,7 @@ const Menu = () => {
             Menu
         </h3>
         <div className='text-center'>
-            <h4 className={`${prata.className} text-3xl md:text-5xl  px-10 mb-3`}>
+            <h4 className={`${prata.className} text-3xl md:text-5xl  sm:px-10 mb-3`}>
                 Your guests deserve more than ordinary catering.
             </h4>
             <p className='max-w-3xl mx-auto italic text-sm sm:text-lg'>
@@ -24,7 +24,7 @@ const Menu = () => {
         </div>
         <div className='grid lg:grid-cols-2 gap-10 place-items-center mt-9'>
             {menus.map(item => (
-                <div className='bg-main h-[500px] rounded-lg border-black border w-[450px] text-white' key={item}>
+                <div className='bg-main h-[500px] rounded-lg border-black border w-[290px] md:w-[450px] text-white' key={item}>
                     <p>{item}</p> 
                 </div>
             ))}
