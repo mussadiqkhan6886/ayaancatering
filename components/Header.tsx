@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 import { Italianno } from "next/font/google"
 import Link from 'next/link'
 import { FiMenu, FiX } from "react-icons/fi"
+import { prata } from '@/lib/fonts/font'
 
 const italianno = Italianno({
   weight: "400",
@@ -34,10 +35,10 @@ const Header = () => {
     <header className="flex flex-col">
 
       {/* Top Bar */}
-      <div className="text-center py-2 text-base md:text-lg bg-main text-white">
+      <div className="text-center font-light py-2 text-base md:text-lg bg-main text-white">
         <p>
           Your Guests Deserve more than just an event.
-          <Link className="underline font-semibold ml-2" href="/">
+          <Link className="underline font-medium ml-2" href="/">
             Make it Memorable
           </Link>
         </p>
@@ -46,7 +47,7 @@ const Header = () => {
       {/* Nav */}
       <nav
         className={`
-          flex items-center justify-between px-4 md:px-6 py-2 border-b border-main
+          flex items-center justify-between px-4 md:px-6 py-3 border-b border-main
           transition-colors duration-300
           ${isFixed
             ? "fixed top-0 left-0 w-full z-50 bg-white"
@@ -57,7 +58,7 @@ const Header = () => {
         {/* Logo */}
         <Link href="/" className="flex flex-col items-center md:items-start">
         <div>
-          <p className="font-semibold text-xl md:text-2xl uppercase text-center">Ayyan</p>
+          <p className={`${prata.className} font-semibold text-xl md:text-[22px] uppercase text-center`}>Ayyan</p>
           <p className={`${italianno.className} text-[25px] md:text-3xl`}>
             Event And Catering
           </p>
@@ -70,7 +71,7 @@ const Header = () => {
             {menu.map(item => (
               <li key={item.item}>
                 <Link
-                  className={`text-lg font-medium ${
+                  className={`font-medium ${
                     isFixed ? "text-main hover:text-black" : "text-white"
                   }`}
                   href={item.link}
@@ -83,7 +84,7 @@ const Header = () => {
 
           <Link
             href="/"
-            className="border border-main rounded-full px-4 py-2 hover:bg-main hover:text-white duration-300"
+            className={`${prata.className} border border-main rounded-full px-6 py-2.5 hover:bg-main hover:text-white duration-300`}
           >
             Get A Custom Quote
           </Link>
@@ -101,7 +102,7 @@ const Header = () => {
       {/* Mobile Menu Dropdown */}
       <div
         className={`
-          md:hidden fixed top-[124px]  left-0 w-full bg-white z-40
+          md:hidden fixed top-[130px]  left-0 w-full bg-white z-40
           transition-all duration-300 overflow-hidden
           ${isOpen ? "max-h-[440px] opacity-100" : "max-h-0 opacity-0"}
         `}
@@ -121,7 +122,7 @@ const Header = () => {
 
           <Link
             href="/"
-            className="border border-main rounded-full px-6 py-2 hover:bg-main hover:text-white duration-300"
+            className={`${prata.className} border border-main rounded-full px-6 py-2.5 hover:bg-main hover:text-white duration-300`}
             onClick={() => setIsOpen(false)}
           >
             Get A Custom Quote

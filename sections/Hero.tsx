@@ -38,7 +38,7 @@ const Hero = () => {
       </h1>
 
       <div className='absolute left-1/2  text-white bottom-25 -translate-x-1/2 flex items-center justify-center flex-col'>
-          <p className='text-2xl mb-5'>See Our Work</p>
+          <p className='text-xl mb-5'>See Our Work</p>
           <FiArrowDown className='text-[35px] md:text-[40px] animate-ping' />
       </div>
 

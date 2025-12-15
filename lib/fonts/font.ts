@@ -1,4 +1,4 @@
-import {Prata, Crimson_Text} from "next/font/google"
+import {Prata, Inter_Tight} from "next/font/google"
 
 export const prata = Prata({
     weight: "400",
@@ -6,8 +6,8 @@ export const prata = Prata({
     subsets: ["latin"]
 })
 
-export const crimson = Crimson_Text({
-    weight: ["400", "600"],
+export const crimson = Inter_Tight({
+    weight: ["100","200","300","400", "600"],
     subsets: ["latin"],
     style: ["italic", "normal"]
 })
